@@ -1,0 +1,135 @@
+{
+  "_comment": "Tarifs publics en dollars par million de tokens, relevés le 2026-11-15 sur les pages officielles listées dans sources. Le serveur relit ce fichier dès qu'il change. Un modèle absent est cherché par le plus long préfixe. write_5m et write_1h : écriture du cache (Anthropic seulement ; ailleurs l'écriture est facturée comme l'entrée). long : tarif appliqué à tout l'appel quand le prompt atteint threshold tokens.",
+  "sources": {
+    "claude": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "grok": "https://docs.x.ai/docs/models",
+    "gemini": "https://aistudio.google.com/docs/pricing",
+    "chatgpt": "https://developers.openai.com/api/docs/pricing"
+  },
+  "models": {
+    "claude-fable-5-2": {
+      "input": 8,
+      "cache_read": 0.2,
+      "write_5m": 10,
+      "write_1h": 16,
+      "output": 40
+    },
+    "claude-opus-5-5": {
+      "input": 4,
+      "cache_read": 0.2,
+      "write_5m": 5,
+      "write_1h": 8,
+      "output": 20
+    },
+    "claude-sonnet-5-5": {
+      "input": 2,
+      "cache_read": 0.1,
+      "write_5m": 2.5,
+      "write_1h": 4,
+      "output": 10
+    },
+    "claude-sonnet-5": {
+      "input": 2,
+      "cache_read": 0.2,
+      "write_5m": 2.5,
+      "write_1h": 4,
+      "output": 10
+    },
+    "claude-haiku-5-5": {
+      "input": 0.1,
+      "cache_read": 0.01,
+      "write_5m": 0.125,
+      "write_1h": 0.2,
+      "output": 0.5,
+      "long": {
+        "threshold": 100001,
+        "input": 0.5,
+        "cache_read": 0.05,
+        "write_5m": 0.625,
+        "write_1h": 1,
+        "output": 2.5
+      }
+    },
+    "grok-4.7": {
+      "input": 2,
+      "cache_read": 0.5,
+      "output": 6,
+      "long": {
+        "threshold": 200000,
+        "input": 4,
+        "cache_read": 1,
+        "output": 12
+      }
+    },
+    "grok-4.6": {
+      "input": 2,
+      "cache_read": 0.5,
+      "output": 6,
+      "long": {
+        "threshold": 200000,
+        "input": 4,
+        "cache_read": 1,
+        "output": 12
+      }
+    },
+    "grok-4.5": {
+      "input": 2,
+      "cache_read": 0.3,
+      "output": 6,
+      "long": {
+        "threshold": 200000,
+        "input": 4,
+        "cache_read": 0.6,
+        "output": 12
+      }
+    },
+    "gemini-3.1-flash-lite": {
+      "input": 0.25,
+      "cache_read": 0.025,
+      "output": 1.5
+    },
+    "gemini-3.5-flash-lite": {
+      "input": 0.3,
+      "cache_read": 0.03,
+      "output": 2.5
+    },
+    "gpt-6-luna": {
+      "input": 0.1,
+      "cache_read": 0.01,
+      "output": 0.5,
+      "long": {
+        "threshold": 272001,
+        "input": 0.2,
+        "cache_read": 0.02,
+        "output": 0.75
+      }
+    },
+    "gpt-5.6-terra": {
+      "input": 2.0,
+      "cache_read": 0.2,
+      "output": 12.0,
+      "long": {
+        "threshold": 272001,
+        "input": 4.0,
+        "cache_read": 0.4,
+        "output": 18.0
+      }
+    },
+    "gpt-5.6-luna": {
+      "input": 0.2,
+      "cache_read": 0.02,
+      "output": 1.2,
+      "long": {
+        "threshold": 272001,
+        "input": 0.4,
+        "cache_read": 0.04,
+        "output": 1.8
+      }
+    },
+    "gpt-5.3-codex": {
+      "input": 1.75,
+      "cache_read": 0.175,
+      "output": 14.0
+    }
+  }
+}
