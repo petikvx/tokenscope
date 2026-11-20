@@ -7,6 +7,8 @@ Tableau de bord local pour suivre la consommation de tokens et le coût estimé 
 - N'expose aucun contenu de conversation, seulement des compteurs.
 - Aucune dépendance : bibliothèque standard Python uniquement.
 
+![Capture du tableau de bord](docs/screenshot.png)
+
 ## Utilisation
 
 ```bash
