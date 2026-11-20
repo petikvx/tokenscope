@@ -38,3 +38,7 @@ Les montants sont des estimations : ils ne remplacent pas la facturation des fou
 - `server.py` : collecte, agrégation et serveur HTTP
 - `web/index.html` : interface
 - `prices.json` : tarifs
+
+## Licence
+
+[MIT](LICENSE)
